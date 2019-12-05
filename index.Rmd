@@ -1,18 +1,23 @@
 ---
 title: "Early Learning Hub of Washington County Map"
-description: |
-  Welcome to the website. I hope you enjoy it!
-site: distill::distill_website
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
-
+```{r child = "setup.Rmd"}
 ```
 
+There will be some introduction text here. 
+
+I'll add text that explains the maps here. Things like:
+
+- Dots are schools
+- Hover over any area to get more info
+- Issues with data
+
+
+```{r, layout="l-page"}
+composite_score %>% 
+  make_map()
+
+composite_score %>% 
+  make_table()
+```

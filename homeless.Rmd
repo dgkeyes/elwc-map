@@ -1,0 +1,15 @@
+---
+title: "Homelessness"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+
+```{r, layout="l-page"}
+homeless %>%
+  make_map()
+
+homeless %>%
+  make_table()
+```

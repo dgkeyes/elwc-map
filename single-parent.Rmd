@@ -1,0 +1,17 @@
+---
+title: "Single-Parent Families"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+
+# Single-Parent Families
+
+```{r, layout="l-page"}
+single_parent %>%
+  make_map()
+
+single_parent %>%
+  make_table()
+```

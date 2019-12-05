@@ -1,12 +1,27 @@
 name: "elwc-map"
 title: "Early Learning Hub of Washington County Map"
-description: |
-  Early Learning Hub of Washington County Map
 output_dir: "docs"
 navbar:
+  logo:
+    image: logo.png
+    href: https://www.earlylearningwashingtoncounty.org/
   right:
-    - text: "Home"
+    - text: "Composite Map"
       href: index.html
-    - text: "About"
-      href: about.html
-output: distill::distill_article
+    - text: "Individual Populations"
+      menu:
+        - text: "Disability"
+          href: disability.html
+        - text: "Homelessness"
+          href: homeless.html
+        - text: "Poverty"
+          href: poverty.html
+        - text: "Race/Ethnicity"
+          href: race-ethnicity.html
+        - text: "Single-Parent Families"
+          href: single-parent.html
+        - text: "SNAP Usage"
+          href: snap.html
+output:
+  distill::distill_article:
+    css: style.css

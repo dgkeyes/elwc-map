@@ -1,0 +1,18 @@
+---
+title: "Disability"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+
+<!-- As table if just at district level -->
+<!-- Mapped if at elementary school catchment area -->
+
+```{r, layout="l-page"}
+disability %>%
+  make_map()
+
+disability %>%
+  make_table()
+```

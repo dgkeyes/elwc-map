@@ -1,0 +1,28 @@
+---
+title: "Poverty"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+
+
+## 100% FPL
+
+```{r, layout="l-page"}
+children_in_poverty_100_fpl %>%
+  make_map()
+
+children_in_poverty_100_fpl %>%
+  make_table()
+```
+
+## 200% FPL
+
+```{r, layout="l-page"}
+children_in_poverty_200_fpl %>%
+  make_map()
+
+children_in_poverty_200_fpl %>%
+  make_table()
+```

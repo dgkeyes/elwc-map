@@ -1,0 +1,15 @@
+---
+title: "SNAP"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+
+```{r, layout="l-page"}
+snap %>%
+  make_map()
+
+snap %>%
+  make_table()
+```
