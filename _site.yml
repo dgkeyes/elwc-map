@@ -22,6 +22,8 @@ navbar:
           href: single-parent.html
         - text: "SNAP Usage"
           href: snap.html
+    - text: "Notes"
+      href: notes.html
 output:
   distill::distill_article:
     css: style.css
