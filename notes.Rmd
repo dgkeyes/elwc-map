@@ -5,4 +5,112 @@ title: "Notes"
 ```{r child = "setup.Rmd"}
 ```
 
+```{r}
+library(reactable)
+library(sf)
+```
+
+
+## Zip Code/ZCTA Data
+
+Data for this project was collected from a wide range of sources. As with any project that combines various data sources, some tradeoffs have to be made in order to have usable data. The largest issue comes from the fact that much of the data provided for this project was at the zip code level. Beacuse zip codes are used by the U.S. Postal Service (and not an entity like the U.S. Census Bureau), they are constantly being updated. What's more, zip codes are simply a collection of houses, and can't necessarily be represented as polygons in the same way that boundaries of census tracts, counties, and other geographical entities can. 
+
+For this project, we used what are known as zip code tabulation areas (ZCTAs), which are provided by the Census Bureau. [While ZCTAs mostly match zip codes, they don't always](http://gis.washington.edu/phurvitz/zip_or_zcta/). To use this data, we developed a list of zip codes in Washington County. 
+
+```{r}
+wash_co_zips_tibble <- wash_co_zips %>% 
+  tibble() %>% 
+  set_names("zip_code")
+
+wash_co_zips_tibble %>% 
+  arrange(zip_code) %>% 
+  set_names("Zip Code") %>% 
+  reactable(defaultColDef = colDef(align = "left"))
+```
+
+However, data from the U.S. Census Bureau on these ZCTAs did not have all of the above zip codes. The table below shows those that were missing. This should be taken into consideration when interpreting results. 
+
+```{r}
+wash_co_zctas %>% 
+  st_drop_geometry() %>% 
+  mutate(zip_code = as.numeric(zip_code)) %>% 
+  full_join(wash_co_zips_tibble) %>% 
+  filter(is.na(row)) %>% 
+  select(-row) %>% 
+  set_names("Zip Code") %>% 
+  reactable(defaultColDef = colDef(align = "left"))
+```
+
+
+
+
+
+## Going from ZCTA and Census Tract to School Catchment Areas
+
+In order to use data provided at the ZCTA or census tract level, we had to identify overlaps in between:
+
+1. ZCTAs and school catchment areas
+1. Census tracts and school catchment areas
+
+We did this using the [sf package from the statitical analysis software R](https://r-spatial.github.io/sf/index.html).
+
+First, a table was developed that demonstrates overalps between ZCTAs and school catchment areas.
+
+```{r}
+overlaps_zcta %>% 
+  select(school, zip_code) %>% 
+  set_names(c("School", "ZCTA")) %>% 
+  reactable(searchable = TRUE)
+```
+
+A second table was developed that demonstrates overalps between census tracts and school catchment areas.
+
+```{r}
+overlaps_census_tracts %>% 
+  select(school, census_tract) %>% 
+  set_names(c("School", "Census Tract")) %>% 
+  reactable(searchable = TRUE)
+```
+
+When data was provided at the ZCTA or census tract level, it was merged into school catchment areas using the following steps:
+
+1. Data at the ZCTA/census tract level was joined using the tables above.
+1. In cases where a school catchment area covers multiple ZCTAs/census tracts, an average of the outcome for each ZCTA/census tract was taken. For example, say the catchment area for school X covers two census tracts. If the average poverty level in the first census tract was 30% and the average in the second census tract was 10%, the average for that school would be the mean of these two (i.e. 20%).
+
+
+## Boundary Maps
+
+In order to demonstrate the various shapefiles used, below are maps at the school catchment area, ZCTA, and census tract level.
+
+### School Catchment Area Map
+
+```{r, layout="l-page"}
+wash_co_school_catchment_areas %>% 
+  left_join(wash_co_schools) %>% 
+  make_shapefile_map(school, "")
+```
+
+### ZCTA Map
+
+```{r, layout="l-page"}
+make_shapefile_map(wash_co_zctas, zip_code, "")
+```
+
+### Census Tract Map
+
+```{r, layout="l-page"}
+make_shapefile_map(wash_co_census_tracts, census_tract, "Census Tract ")
+```
+
+
+## ERDC and Head Start Data
+
+Data on ERDC and Head Start was provided at the zip code level. It is shown at the school catchment area throughout using the merging procedure outline above. Because the number of ERDC and Head Starts providers within each school catchment area is calculated as an average of all the ZCTAs that it touches, the result is often not a whole number. 
+
+## High Margins of Error Throughout
+
+Please note that much of the data here has high margins of error, given that it covers small populations. All data should be interpreted with caution. 
+
+
+
 

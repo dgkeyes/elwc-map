@@ -5,24 +5,62 @@ title: "Poverty"
 ```{r child = "setup.Rmd"}
 ```
 
+## Below 100% Federal Poverty Level
 
+**Currently Serving**<br> 
+134 0-2 yr<br>
+314 3-5 yr
 
-## 100% FPL
+**Eligible but not Served**<br>
+638 0-2 yr<br>
+5742 3-5 yr
+
+**Percent Served**<br>
+21% 0-2 yr<br>
+5.5% 3-5 yr
 
 ```{r, layout="l-page"}
 children_in_poverty_100_fpl %>%
   make_map()
+```
 
+<br>
+
+```{r, layout="l-screen-inset"}
 children_in_poverty_100_fpl %>%
   make_table()
 ```
 
-## 200% FPL
+## Between 100% and 200% Federal Poverty Level
+
+**Currently Serving**<br> 
+114 0-2 yr<br>
+1054 3-5 yr
+
+**Eligible but not Served**<br>
+7177 0-2 yr<br>
+6126 3-5 yr
+
+**Percent Served**<br>
+1.6% 0-2 yr<br>
+17.2% 3-5 yr
 
 ```{r, layout="l-page"}
 children_in_poverty_200_fpl %>%
   make_map()
 
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
 children_in_poverty_200_fpl %>%
   make_table()
 ```
+
+### Where the Data Comes From
+
+Data on poverty comes from the [American Community Survey table B17024](https://censusreporter.org/tables/B17024/). 
+
+Because this data comes at the census tract level, it was merged to match school catchment areas using methodology described on the [notes page](notes.html).
+

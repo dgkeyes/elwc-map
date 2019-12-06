@@ -5,14 +5,28 @@ title: "Disability"
 ```{r child = "setup.Rmd"}
 ```
 
+Total # enrolled in EI (0-2): 722<br>
+Total # enrolled in ECSE (3-5): 1,379<br>
+Total # enrolled in EI/ECSE: 2,101<br>
 
-<!-- As table if just at district level -->
-<!-- Mapped if at elementary school catchment area -->
+ESCE Placed in Community Preschool: 434<br>
+ESCE Community Preschool Gap: 845<br>
+Percent Served: 31%
 
 ```{r, layout="l-page"}
 disability %>%
   make_map()
+```
 
+<br>
+
+```{r, layout="l-screen-inset"}
 disability %>%
   make_table()
 ```
+
+### Where the Data Comes From
+
+Disability data at the school level comes from the State of Oregon.
+
+

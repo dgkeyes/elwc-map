@@ -1,0 +1,178 @@
+---
+title: "Communities of Color"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+
+
+## All Communities of Color
+
+**Currently Serving**<br> 
+94 0-2 yr<br>
+831 3-5 yr
+
+**Eligible but not Served**<br>
+5871 0-2 yr<br>
+4221 3-5 yr
+
+**Percent Served**<br>
+1.6% 0-2 yr<br>
+19.6% 3-5 yr
+
+```{r, layout="l-page"}
+race_ethnicity_composite %>% 
+  make_map()
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+race_ethnicity_composite %>% 
+  make_table()
+```
+
+
+
+
+## Black
+
+**Currently Serving**<br> 
+8 0-2 yr<br>
+67 3-5 yr
+
+**Eligible but not Served**<br>
+165 0-2 yr<br>
+214 3-5 yr
+
+**Percent Served**<br>
+4.8% 0-2 yr<br>
+31.3% 3-5 yr
+
+```{r, layout="l-page"}
+race_ethnicity_black %>% 
+  make_map()
+
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+race_ethnicity_black %>% 
+  make_table()
+```
+
+
+## American Indian and Alaska Native
+
+**Currently Serving**<br> 
+0 0-2 yr<br>
+16 3-5 yr
+
+**Eligible but not Served**<br>
+57 0-2 yr<br>
+80 3-5 yr
+
+**Percent Served**<br>
+0% 0-2 yr<br>
+20% 3-5 yr
+
+```{r, layout="l-page"}
+race_ethnicity_aian %>% 
+  make_map()
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+race_ethnicity_aian %>% 
+  make_table()
+```
+
+
+## Asian
+
+**Currently Serving**<br> 
+5 0-2 yr<br>
+33 3-5 yr
+
+**Eligible but not Served**<br>
+179 0-2 yr<br>
+245 3-5 yr
+
+**Percent Served**<br>
+2.8% 0-2 yr<br>
+13.5% 3-5 yr
+
+```{r, layout="l-page"}
+race_ethnicity_asian %>% 
+  make_map()
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+race_ethnicity_asian %>% 
+  make_table()
+```
+
+
+## Caucasian
+
+**Currently Serving**<br> 
+20 0-2 yr<br>
+223 3-5 yr
+
+**Eligible but not Served**<br>
+1306 0-2 yr<br>
+1905 3-5 yr
+
+**Percent Served**<br>
+1.5% 0-2 yr<br>
+11.7% 3-5 yr
+
+```{r, layout="l-page"}
+race_ethnicity_white %>% 
+  make_map()
+
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+race_ethnicity_white %>% 
+  make_table()
+```
+
+
+## Hispanic
+
+**Currently Serving**<br> 
+101 0-2 yr<br>
+673 3-5 yr
+
+**Eligible but not Served**<br>
+933 0-2 yr<br>
+1905 3-5 yr
+
+**Percent Served**<br>
+10.8% 0-2 yr<br>
+35.3% 3-5 yr
+
+```{r, layout="l-page"}
+race_ethnicity_latino %>% 
+  make_map()
+```
+
+```{r, layout="l-screen-inset"}
+race_ethnicity_latino %>% 
+  make_table()
+```
+
+
+### Where the Data Comes From
+
+Data about children of color at each school was provided by Health Share of Oregon. 
+
+The composite score was created by combining and generating an average of the Score Relative to Median for each individual community of color. 

@@ -28,4 +28,24 @@
   }
 }
 
+
+
+.l-page {
+  margin: 30px 0 50px 0;
+}
+
+.l-screen-inset {
+  margin-bottom: 50px;
+}
+
 */
+
+.distill-site-nav {
+  background-color: #08519c;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+h2 {
+  border-bottom: none;
+}

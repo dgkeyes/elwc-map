@@ -1,15 +1,31 @@
 ---
-title: "Homelessness"
+title: "Homeless"
 ---
 
 ```{r child = "setup.Rmd"}
 ```
 
+Currently Serving: 248
+
+Eligible but not Served: 790 
+
+Percent Served: 31%^[*Disparity is likely most acute amongst 0-2 population given the difference in publicly funded child care slots (160 0-2yrs VS. 993 3-5yrs)*] 
+
 
 ```{r, layout="l-page"}
 homeless %>%
   make_map()
+```
 
+<br>
+
+```{r, layout="l-screen-inset"}
 homeless %>%
   make_table()
 ```
+
+### Where the Data Comes From
+
+Data on homelessness among Pre-K students was provided by TK. 
+
+Because the data was provided at the zip code level, it was merged to match school catchment areas using methodology described on the [notes page](notes.html).

@@ -8,19 +8,19 @@ navbar:
   right:
     - text: "Composite Map"
       href: index.html
-    - text: "Individual Populations"
+    - text: "Priority Populations"
       menu:
+        - text: "Communities of Color"
+          href: communities-of-color.html
         - text: "Disability"
           href: disability.html
-        - text: "Homelessness"
+        - text: "Homeless"
           href: homeless.html
         - text: "Poverty"
           href: poverty.html
-        - text: "Race/Ethnicity"
-          href: race-ethnicity.html
         - text: "Single-Parent Families"
           href: single-parent.html
-        - text: "SNAP Usage"
+        - text: "SNAP"
           href: snap.html
     - text: "Notes"
       href: notes.html

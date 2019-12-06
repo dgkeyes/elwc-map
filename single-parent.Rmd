@@ -4,14 +4,26 @@ title: "Single-Parent Families"
 
 ```{r child = "setup.Rmd"}
 ```
-
+Currently Serving: 455<br>
+Eligible but not Served: 6,346<br>
+Percent Served: 7.2%
 
 # Single-Parent Families
 
 ```{r, layout="l-page"}
 single_parent %>%
   make_map()
+```
 
+<br>
+
+```{r, layout="l-screen-inset"}
 single_parent %>%
   make_table()
 ```
+
+### Where the Data Comes From
+
+Data on poverty comes from the [American Community Survey table B23008](https://censusreporter.org/tables/B23008/). 
+
+Because this data comes at the census tract level, it was merged to match school catchment areas using methodology described on the [notes page](notes.html).

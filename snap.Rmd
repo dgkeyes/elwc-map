@@ -5,11 +5,21 @@ title: "SNAP"
 ```{r child = "setup.Rmd"}
 ```
 
+Currently serving 11304 children
 
 ```{r, layout="l-page"}
 snap %>%
   make_map()
+```
+<br>
 
+```{r, layout="l-screen-inset"}
 snap %>%
   make_table()
 ```
+
+### Where the Data Comes From
+
+Data on SNAP usage was provided by the Oregon Department of Human Services.
+
+Because the data was provided at the zip code level, it was merged to match school catchment areas using methodology described on the [notes page](notes.html).

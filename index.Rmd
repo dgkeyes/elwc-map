@@ -5,19 +5,52 @@ title: "Early Learning Hub of Washington County Map"
 ```{r child = "setup.Rmd"}
 ```
 
-There will be some introduction text here. 
+The mission of The Early Learning Hub of Washington County (ELWC) is to bring together the Washington County Early Learning Community partners in order to develop and implement an early learning system that provides opportunities, services, and supports needed to ensure children ages birth through six and their families are prepared for educational and life success. The maps and tables are designed to help the ELWC identify priority populations in order to effectively conduct its work. 
 
-I'll add text that explains the maps here. Things like:
+For all of the maps below, the shapes show the elementary school catchment areas for schools in Washington County (the data comes from the [State of Oregon](https://spatialdata.oregonexplorer.info/geoportal/details;id=1270fe6e833f4d0eabacc71300069738)). The schools included come from the following districts: Banks, Beaverton, Forest Grove, Gaston, Hillsboro, Sherwood, and Tigard-Tualatin. 
 
-- Dots are schools
-- Hover over any area to get more info
-- Issues with data
+### How to Use the Maps
+
+- **Darker shading** indicates a higher number of children within various priority populations
+- **Tiers** go from 4 to 1, with 1 being the highest
+- **Dark gray dots** show the location of elementary schools
+- **Hover** over any school catchment area or school to see information about it
+
+### How to Use the Tables
+
+In addition to listing the school and associated district, each table shows the following: 
+
+- **Score Relative to Median**: How much a school catchment area varies from the median on any particular item. For example, a school catchment area with 20 children^[These are made-up numbers] who are homeless would have a value of 2 if the median number of homeless children in all school catchment areas is 10.
+- **ERDC (Employment-Related Day Care) Providers**^[There may be fractions due to how this is calculated; see the [notes page](notes.html)]: The number of providers in the school catchment area that accept [ERDC public funding](http://ccrr-mc.org/employment-related-day-care/).
+- **Head Start Providers**: The number of Head Start providers in the school catchment area.
+
+
+### Where the Data Comes From
+
+On each page, there is a short description of where the data used comes from. There is also a [notes page](notes.html) with information on the wide range of sources used to bring together data for this project. 
+
+## Composite Map
+
+A composite score for each school catchment area was developed by combining the "Score Relative to Median" values for the following items:
+
+- [Children living below 100% Federal Poverty Level](poverty.html)
+- [Communities of color composite score](communities-of-color.html)
+- [Homeless children](homeless.html)
+- [Single-parent families](single-parent.html)
+- [SNAP usage](snap.html)
+
+<br>
 
 
 ```{r, layout="l-page"}
 composite_score %>% 
   make_map()
+```
 
+<br>
+
+```{r, layout="l-screen-inset"}
 composite_score %>% 
   make_table()
 ```
+
