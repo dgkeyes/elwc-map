@@ -22,6 +22,8 @@ navbar:
           href: single-parent.html
         - text: "SNAP"
           href: snap.html
+    - text: "Child Care Capacity"
+      href: child-care-capacity.html
     - text: "Notes"
       href: notes.html
 output:

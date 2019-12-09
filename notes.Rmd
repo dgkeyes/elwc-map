@@ -107,6 +107,14 @@ make_shapefile_map(wash_co_census_tracts, census_tract, "Census Tract ")
 
 Data on ERDC and Head Start was provided at the zip code level. It is shown at the school catchment area throughout using the merging procedure outline above. Because the number of ERDC and Head Starts providers within each school catchment area is calculated as an average of all the ZCTAs that it touches, the result is often not a whole number. 
 
+## Child Care Deserts Data
+
+While the data provided by the Center for American Progress on child care deserts is helpful, it comes with caveats. Specifically, they wrote to explain a bit about how the data was collected:
+
+> The state of Oregon wouldn’t give out the street addresses of family child care homes, only the ZIP codes. Thus, when we geocoded the FCCHs, they all get placed at the center point of the ZIP Code, and then got assigned to the census tract that covers that point. So there’s a fair amount of error in the Oregon capacity numbers, which we’re attempting to rectify in the next version of this project.
+
+Given the lack of precision on the locations of family child care providers, results should be interpreted with caution.
+
 ## High Margins of Error Throughout
 
 Please note that much of the data here has high margins of error, given that it covers small populations. All data should be interpreted with caution. 

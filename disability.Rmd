@@ -25,6 +25,13 @@ disability %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(disability) %>% 
+  percent(0.1)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
 ### Where the Data Comes From
 
 Disability data at the school level comes from the State of Oregon.

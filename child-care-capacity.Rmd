@@ -1,0 +1,38 @@
+---
+title: "Child Care Capacity"
+---
+
+```{r child = "setup.Rmd"}
+```
+
+This data below shows child care capacity, which is calculated as the ratio between the number of licensed child care slots and the number of children under five years of age in any given census tract. 
+
+```{r, layout="l-page"}
+child_care_capacity %>%
+  make_map()
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+child_care_capacity %>%
+  make_table()
+```
+
+```{r}
+median_value_raw <- pull_median_value(child_care_capacity) %>% 
+  number(0.01)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
+
+### Where the Data Comes From
+
+Data was provided by the Center for American Progress, who collected it as part of their [project on child care deserts in the United States](https://childcaredeserts.org/index.html?state=OR). 
+
+Because this data comes at the census tract level, it was merged to match school catchment areas using methodology described on the [notes page](notes.html).
+
+
+
+

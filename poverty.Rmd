@@ -31,6 +31,13 @@ children_in_poverty_100_fpl %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(children_in_poverty_100_fpl) %>% 
+  percent(0.1)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
 ## Between 100% and 200% Federal Poverty Level
 
 **Currently Serving**<br> 
@@ -57,6 +64,15 @@ children_in_poverty_200_fpl %>%
 children_in_poverty_200_fpl %>%
   make_table()
 ```
+
+
+```{r}
+median_value_raw <- pull_median_value(children_in_poverty_200_fpl) %>% 
+  percent(0.1)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
 
 ### Where the Data Comes From
 

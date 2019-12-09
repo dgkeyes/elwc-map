@@ -63,6 +63,13 @@ race_ethnicity_black %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(race_ethnicity_black)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
+
 
 ## American Indian and Alaska Native
 
@@ -89,6 +96,12 @@ race_ethnicity_aian %>%
 race_ethnicity_aian %>% 
   make_table()
 ```
+
+```{r}
+median_value_raw <- pull_median_value(race_ethnicity_aian)
+```
+
+*The median value for this table is `r median_value_raw`.*
 
 
 ## Asian
@@ -117,6 +130,11 @@ race_ethnicity_asian %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(race_ethnicity_asian)
+```
+
+*The median value for this table is `r median_value_raw`.*
 
 ## Caucasian
 
@@ -145,6 +163,12 @@ race_ethnicity_white %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(race_ethnicity_white)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
 
 ## Hispanic
 
@@ -170,6 +194,11 @@ race_ethnicity_latino %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(race_ethnicity_latino)
+```
+
+**The median value for this table is `r median_value_raw`.**
 
 ### Where the Data Comes From
 

@@ -18,6 +18,13 @@ snap %>%
   make_table()
 ```
 
+```{r}
+median_value_raw <- pull_median_value(snap)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
+
 ### Where the Data Comes From
 
 Data on SNAP usage was provided by the Oregon Department of Human Services.
