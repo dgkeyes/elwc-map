@@ -119,6 +119,7 @@ Given the lack of precision on the locations of family child care providers, res
 
 Please note that much of the data here has high margins of error, given that it covers small populations. All data should be interpreted with caution. 
 
+## Raw Data
 
-
+A zip file with all of the raw data used in the maps and tables is available [here](data/data.zip).
 

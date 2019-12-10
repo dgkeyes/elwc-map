@@ -11,4 +11,7 @@ library(janitor)
 library(scales)
 library(mapdeck)
 library(washcomap)
+library(here)
+
+source(here("data/write-data.R"))
 ```

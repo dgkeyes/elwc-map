@@ -40,6 +40,18 @@ median_value_raw <- pull_median_value(children_in_poverty_100_fpl) %>%
 
 ## Between 100% and 200% Federal Poverty Level
 
+**Currently Serving**<br> 
+57 0-2 yr<br>
+213 3-5 yr
+
+**Eligible but not Served**<br>
+3815 0-2 yr<br>
+3659 3-5 yr
+
+**Percent Served**<br>
+1.5% 0-2 yr<br>
+5.8% 3-5 yr
+
 
 ```{r, layout="l-page"}
 children_in_poverty_between_100_200 %>%
