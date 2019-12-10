@@ -25,7 +25,7 @@ single_parent %>%
 
 ```{r}
 median_value_raw <- pull_median_value(single_parent) %>% 
-  percent(0.1)
+  number(0.1)
 ```
 
 *The median value for this table is `r median_value_raw`.*

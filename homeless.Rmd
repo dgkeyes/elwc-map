@@ -7,7 +7,7 @@ title: "Homeless"
 
 Currently Serving: 248
 
-Eligible but not Served: 790 
+Eligible but not Served: 542 
 
 Percent Served: 31%^[*Disparity is likely most acute amongst 0-2 population given the difference in publicly funded child care slots (160 0-2yrs VS. 993 3-5yrs)*] 
 

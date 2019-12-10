@@ -33,12 +33,36 @@ children_in_poverty_100_fpl %>%
 
 ```{r}
 median_value_raw <- pull_median_value(children_in_poverty_100_fpl) %>% 
-  percent(0.1)
+  number(0.1)
 ```
 
 *The median value for this table is `r median_value_raw`.*
 
 ## Between 100% and 200% Federal Poverty Level
+
+
+```{r, layout="l-page"}
+children_in_poverty_between_100_200 %>%
+  make_map()
+
+```
+
+<br>
+
+```{r, layout="l-screen-inset"}
+children_in_poverty_between_100_200 %>%
+  make_table()
+```
+
+
+```{r}
+median_value_raw <- pull_median_value(children_in_poverty_between_100_200) %>% 
+  number(0.1)
+```
+
+*The median value for this table is `r median_value_raw`.*
+
+## Below 200% Federal Poverty Level
 
 **Currently Serving**<br> 
 114 0-2 yr<br>
@@ -68,7 +92,7 @@ children_in_poverty_200_fpl %>%
 
 ```{r}
 median_value_raw <- pull_median_value(children_in_poverty_200_fpl) %>% 
-  percent(0.1)
+  number(0.1)
 ```
 
 *The median value for this table is `r median_value_raw`.*
