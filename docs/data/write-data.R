@@ -4,6 +4,7 @@ library(writexl)
 library(fs)
 library(here)
 library(zip)
+library(washcomap)
 
 write_data <- function(df) {
   
